@@ -1,0 +1,199 @@
+@charset "UTF-8";
+.container1 {
+  width: 700px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 40px;
+  overflow: hidden; }
+  .container1 img {
+    width: 500px; }
+  .container1:before {
+    /* 白い四角形が左から右へ移動 */
+    content: '';
+    display: block;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    animation: show 2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+
+@keyframes show {
+  100% {
+    transform: translateX(100%); } }
+
+.container2 {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 40px;
+  overflow: hidden; }
+  .container2 img {
+    width: 500px; }
+  .container2:before {
+    /* 白い四角形が左から右へ移動 */
+    content: '';
+    display: block;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    animation: show2 2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+
+@keyframes show2 {
+  100% {
+    transform: translateX(-100%); } }
+
+.container3 {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 40px;
+  overflow: hidden;
+  animation: show3 3s cubic-bezier(0.4, 0, 0.2, 1); }
+
+@keyframes show3 {
+  0% {
+    clip-path: circle(0 at 50% 50%); }
+  100% {
+    clip-path: circle(100% at 50% 50%); } }
+  .container3 img {
+    width: 500px; }
+
+.container4 {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 40px;
+  overflow: hidden; }
+  .container4 img {
+    width: 500px; }
+  .container4:before {
+    content: '';
+    display: block;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 50%;
+    animation: show 2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+
+@keyframes show {
+  100% {
+    transform: translateX(100%); } }
+  .container4:after {
+    content: '';
+    display: block;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 50%;
+    animation: show2 2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+
+@keyframes show2 {
+  100% {
+    transform: translateX(-100%); } }
+
+.container5 {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 40px;
+  overflow: hidden; }
+  .container5 img {
+    width: 500px; }
+  .container5:before {
+    content: '';
+    display: block;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 50%;
+    height: 100%;
+    animation: show5 2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+
+@keyframes show5 {
+  100% {
+    transform: translateY(100%); } }
+  .container5:after {
+    content: '';
+    display: block;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    width: 50%;
+    height: 100%;
+    animation: show6 2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+
+@keyframes show6 {
+  100% {
+    transform: translateY(-100%); } }
+
+.container6 {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 40px;
+  overflow: hidden; }
+  .container6 .cover1, .container6 .cover2, .container6 .cover3 {
+    width: 100%;
+    height: calc(100% / 3);
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    animation: show7 2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+  .container6 .cover {
+    top: 0; }
+  .container6 .cover2 {
+    top: calc(100% / 3);
+    animation-delay: 0.2s; }
+  .container6 .cover3 {
+    top: calc(100% / 3 * 2);
+    animation-delay: 0.4s; }
+  .container6 img {
+    width: 500px; }
+
+@keyframes show7 {
+  100% {
+    transform: translateX(100%); } }
+
+.sample {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 40px;
+  overflow: hidden; }
+  .sample img {
+    width: 500px; }
+  .sample.img-animation {
+    position: relative; }
+    .sample.img-animation:before {
+      animation: show 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      content: '';
+      display: block;
+      background-color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      width: 100%;
+      height: 100%; }
+
+@keyframes show {
+  100% {
+    transform: translateX(100%); } }

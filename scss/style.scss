@@ -1,0 +1,242 @@
+// .container1
+.container1 {
+	width: 700px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 40px;
+	overflow: hidden;
+	img {
+		width: 500px;
+	}
+	&:before {
+		/* 白い四角形が左から右へ移動 */
+		content: '';
+		display: block;
+		background-color: white;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		animation: show 2s cubic-bezier(.4, 0, .2, 1) forwards;
+		@keyframes show {
+			100% {
+				transform: translateX(100%);
+			}
+		}
+	}
+}
+
+
+// .container2
+.container2 {
+	width: 500px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 40px;
+	overflow: hidden;
+	img {
+		width: 500px;
+	}
+	&:before {
+		/* 白い四角形が左から右へ移動 */
+		content: '';
+		display: block;
+		background-color: white;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		animation: show2 2s cubic-bezier(.4, 0, .2, 1) forwards;
+		@keyframes show2 {
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+	}
+}
+
+// .container3
+.container3 {
+	width: 500px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 40px;
+	overflow: hidden;
+	animation: show3 3s cubic-bezier(.4, 0, .2, 1);
+	@keyframes show3 {
+		0% {
+			clip-path: circle(0 at 50% 50%); //半径 at 中心点の座標　
+		}
+		100% {
+			clip-path: circle(100% at 50% 50%);
+		}
+	}
+	img {
+		width: 500px;
+	}
+}
+
+// .container4
+.container4 {
+	width: 500px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 40px;
+	overflow: hidden;
+	img {
+		width: 500px;
+	}
+	&:before {
+		content: '';
+		display: block;
+		background-color: white;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+		height: 50%;
+		animation: show 2s cubic-bezier(.4, 0, .2, 1) forwards;
+		@keyframes show {
+			100% {
+				transform: translateX(100%);
+			}
+		}
+	}
+	&:after {
+		content: '';
+		display: block;
+		background-color: white;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+		height: 50%;
+		animation: show2 2s cubic-bezier(.4, 0, .2, 1) forwards;
+		@keyframes show2 {
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+	}
+}
+
+// .container5
+.container5 {
+	width: 500px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 40px;
+	overflow: hidden;
+	img {
+		width: 500px;
+	}
+	&:before {
+		content: '';
+		display: block;
+		background-color: white;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 50%;
+		height: 100%;
+		animation: show5 2s cubic-bezier(.4, 0, .2, 1) forwards;
+		@keyframes show5 {
+			100% {
+				transform: translateY(100%);
+			}
+		}
+	}
+	&:after {
+		content: '';
+		display: block;
+		background-color: white;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 100;
+		width: 50%;
+		height: 100%;
+		animation: show6 2s cubic-bezier(.4, 0, .2, 1) forwards;
+		@keyframes show6 {
+			100% {
+				transform: translateY(-100%);
+			}
+		}
+	}
+}
+
+// .container6
+.container6 {
+	width: 500px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 40px;
+	overflow: hidden;
+	.cover1, .cover2, .cover3 {
+		width: 100%;
+		height: calc(100% / 3);
+		background-color: #ffffff;
+		position: absolute;
+		left: 0;
+		z-index: 100;
+		animation: show7 2s cubic-bezier(.4, 0, .2, 1) forwards;
+	}
+	.cover {
+		top: 0;
+	}
+	.cover2 {
+		top: calc(100% / 3);
+		animation-delay: 0.2s;
+	}
+	.cover3 {
+		top: calc(100% / 3 * 2);
+		animation-delay: 0.4s;
+	}
+	img {
+		width: 500px;
+	}
+	@keyframes show7 {
+		100% {
+			transform: translateX(100%);
+		}
+	}
+}
+
+// .container7
+.sample {
+	width: 500px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 40px;
+	overflow: hidden;
+	img {
+		width: 500px;
+	}
+	&.img-animation {
+		position: relative;
+		&:before {
+			animation: show 2s cubic-bezier(.4, 0, .2, 1) forwards;
+			content: '';
+			display: block;
+			background-color: white;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 100;
+			width: 100%;
+			height: 100%;
+			@keyframes show {
+				100% {
+					transform: translateX(100%);
+				}
+			}
+		}
+	}
+}
