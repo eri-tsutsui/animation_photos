@@ -30,7 +30,7 @@ gulp.task("default", gulp.task("sass"));
 
 
 // 監視タスク
-gulp.task( 'watch', function() {
+gulp.task( 'sass:watch', function() {
   gulp.watch( 'scss/style.scss', gulp.task( 'sass' ) );
 });
 
