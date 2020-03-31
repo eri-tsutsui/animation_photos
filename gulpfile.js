@@ -23,6 +23,17 @@ gulp.task("sass", () =>
 
 
 
+// babelを利用
+gulp.task('babel', () => {
+    const babel = require('gulp-babel')
+    return gulp
+        .src('js/main.js')
+        .pipe(babel())
+        .pipe(gulp.dest('dist/js'))
+})
+
+
+
 // taskの登録
 gulp.task("default", gulp.task("imagemin"));
 gulp.task("default", gulp.task("sass"));
@@ -30,7 +41,8 @@ gulp.task("default", gulp.task("sass"));
 
 
 // 監視タスク
-gulp.task( 'sass:watch', function() {
+gulp.task( 'watch', function() {
   gulp.watch( 'scss/style.scss', gulp.task( 'sass' ) );
+  gulp.watch( 'js/main.js', gulp.task( 'babel' ) );
 });
 
